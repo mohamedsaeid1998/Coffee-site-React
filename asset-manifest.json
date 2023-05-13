@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/Coffee-site-React/static/css/main.79d37948.css",
+    "main.js": "/Coffee-site-React/static/js/main.cdb055ba.js",
+    "static/media/Picture1.png": "/Coffee-site-React/static/media/Picture1.d986194af738e68de59e.png",
+    "static/media/fa-solid-900.ttf": "/Coffee-site-React/static/media/fa-solid-900.b48ad290d0335879a92b.ttf",
+    "static/media/fa-brands-400.ttf": "/Coffee-site-React/static/media/fa-brands-400.f9ee61fab3c11e2f3ed3.ttf",
+    "static/media/fa-solid-900.woff2": "/Coffee-site-React/static/media/fa-solid-900.66104b766c3d0462b3c5.woff2",
+    "static/media/error.svg": "/Coffee-site-React/static/media/error.084f5f5b0eb10d3216cb7c939108e1f6.svg",
+    "static/media/fa-brands-400.woff2": "/Coffee-site-React/static/media/fa-brands-400.e1a247a5ef41e1975742.woff2",
+    "static/media/about-img.jpeg": "/Coffee-site-React/static/media/about-img.3f087d850ed9e2aef04a.jpeg",
+    "static/media/111.jpg": "/Coffee-site-React/static/media/111.ebefb2f7742af76f0cdb.jpg",
+    "static/media/fa-regular-400.ttf": "/Coffee-site-React/static/media/fa-regular-400.abf801b7acb6705a15ad.ttf",
+    "static/media/fa-regular-400.woff2": "/Coffee-site-React/static/media/fa-regular-400.639d2000c1ece92eaec8.woff2",
+    "static/media/visa-color-v2.png": "/Coffee-site-React/static/media/visa-color-v2.e715f0a5ea209d84b672.e715f0a5ea209d84b672.png",
+    "static/media/preview.png": "/Coffee-site-React/static/media/preview.000ff2e3917dbf02deff.png",
+    "static/media/mastercard-color.svg": "/Coffee-site-React/static/media/mastercard-color.9d92205ccccd5a3be0a144924c0e1969.9d92205ccccd5a3be0a144924c0e1969.svg",
+    "static/media/fa-v4compatibility.ttf": "/Coffee-site-React/static/media/fa-v4compatibility.f601162ae669f88823a3.ttf",
+    "static/media/amex-color.svg": "/Coffee-site-React/static/media/amex-color.1f90f878d6547d653ea573e04ab0ea65.1f90f878d6547d653ea573e04ab0ea65.svg",
+    "static/media/fa-v4compatibility.woff2": "/Coffee-site-React/static/media/fa-v4compatibility.745989aab0d69cab7e70.woff2",
+    "static/media/slick.svg": "/Coffee-site-React/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/Coffee-site-React/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/Coffee-site-React/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/Coffee-site-React/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/Coffee-site-React/index.html",
+    "main.79d37948.css.map": "/Coffee-site-React/static/css/main.79d37948.css.map",
+    "main.cdb055ba.js.map": "/Coffee-site-React/static/js/main.cdb055ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.79d37948.css",
+    "static/js/main.cdb055ba.js"
+  ]
+}

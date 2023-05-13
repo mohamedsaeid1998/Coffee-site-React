@@ -31,7 +31,7 @@ let param = useParams()
   async function getBrandsProducts(Id){
       let {data} = await axios.get(`https://coffee-2pwn.onrender.com/api/v1/brands/${Id}/products`).catch((error)=>error)
       setProducts(data)
-      console.log(data);
+
     }
 
 

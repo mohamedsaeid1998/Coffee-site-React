@@ -13,7 +13,7 @@ export default function Categories() {
 async function getCategories (){
   let {data} = await axios.get(`https://coffee-2pwn.onrender.com/api/v1/categories/`).catch((error)=>error)
   setCategory(data)
-console.log(data);
+
 }
 
 var settings = {

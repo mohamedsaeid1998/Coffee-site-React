@@ -18,7 +18,7 @@ const [CardsDetails, setCardsDetails] = useState(null)
 async function getMachinesCards(id){
 let {data} = await axios.get(`https://coffee-2pwn.onrender.com/api/v1/machines/${id}`).catch((error)=>error)
 setCardsDetails(data.data)
-console.log(data.data);
+
 
 
 }

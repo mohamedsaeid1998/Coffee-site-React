@@ -19,7 +19,7 @@ async function getUserDetails(){
   })
   .then((response)=>response)
   .catch((error)=>error)
-  console.log(response.data.User);
+
 
   if (response.status===200){
     setUser(response.data.User)

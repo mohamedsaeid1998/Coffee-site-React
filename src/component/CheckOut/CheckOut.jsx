@@ -21,7 +21,7 @@ let {OrderRequest , setNumOfCartItems ,userAddressesUpdate,payByVisa} = useConte
 
   async function handleOrder(values){
 
-    console.log(values);
+
     let response = await OrderRequest(values )
     let details=values.details
     let phone=values.phone
@@ -33,7 +33,7 @@ let {OrderRequest , setNumOfCartItems ,userAddressesUpdate,payByVisa} = useConte
       setNumOfCartItems(0)
       navigate("/")
       }
-    console.log(response);
+
   }
 
 
@@ -53,16 +53,16 @@ let {OrderRequest , setNumOfCartItems ,userAddressesUpdate,payByVisa} = useConte
 
 
 async function getUserAddresses(details , phone , city , street){
-  console.log(details);
+
   let response = await userAddressesUpdate(details , phone , city , street)
-  console.log(response);
+
 }
 
 async function orderByVisa(shippingAddress){
   let response = await payByVisa(shippingAddress)
-  console.log(response);
+
   if(response.data.status === "success"){
-    console.log(response.data.url)
+
 window.location.href=response.data.url
   }
 }
@@ -72,7 +72,7 @@ function orderDetails(details , phone , city , street) {
   let  phonee=phone
   let  cityy=city
   let  streett=street
-  console.log(detailss);
+
 getUserAddresses(detailss,phonee,cityy,streett)   
   }
 

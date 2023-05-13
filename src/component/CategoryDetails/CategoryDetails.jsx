@@ -32,7 +32,7 @@ export default function CategoryDetails() {
   async function getCategoryProducts(id){
       let {data} = await axios.get(`https://coffee-2pwn.onrender.com/api/v1/categories/${id}/products`).catch((error)=>error)
       setCategoryProducts(data)
-      console.log(data.result);
+
     }
 
   return <>

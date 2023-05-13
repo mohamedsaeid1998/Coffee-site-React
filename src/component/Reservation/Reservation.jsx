@@ -8,7 +8,6 @@ export default function Reservation() {
 const onSubmit = (e) =>{
   e.preventDefault();
   const FormData = new formData(e.currentTarget)
-  console.log(FormData);
   toast.success(`Reservation successful`,{ duration: 3000, position: 'top-center',className: 'bg-success text-white'})
   navigate("/")
 }

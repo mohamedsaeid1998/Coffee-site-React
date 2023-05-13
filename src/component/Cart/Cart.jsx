@@ -20,7 +20,7 @@ const [load, setLoad] = useState(false)
 
 async function displayCartProducts(){
 let response = await getUserCart()
-console.log(response);
+
   if(response?.data?.status==="success"){
     setProduct(response?.data)
     setNumOfCartItems(response?.data?.numOfCartItems)
@@ -37,17 +37,17 @@ if(response.data.User.addresses.length===0){
 }else{
   navigate("/Addresses")
 }
-console.log(response);
+
 
 }
 
 
 async function deleteCartProducts(id){
-  console.log(id);
+
   setLoad(true)
   let response = await deleteProductCart(id)
   setProduct(response.data)
-  console.log(response.data);
+
   setLoad(false)
 }
 
@@ -60,7 +60,7 @@ async function updateCartProducts(id,count){
   let response = await updateProductCart(id,count)
   setProduct(response.data)
   setLoad(false)
-  console.log(response.data);
+
 }
 
 return <>

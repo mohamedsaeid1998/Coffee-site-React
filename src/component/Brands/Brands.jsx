@@ -16,12 +16,12 @@ const [Brands, setBrands] = useState(null)
 async function getBrands(){
     let {data} = await axios.get(`https://coffee-2pwn.onrender.com/api/v1/brands`).catch((error)=>error)
     setBrands(data)
-    console.log(data);
+
   }
 
   async function handlePageClick(data){
     let page = data.selected+1
-    console.log(page);
+
     setBrands(page)
   }
 

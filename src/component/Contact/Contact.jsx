@@ -10,7 +10,7 @@ export default function Contact() {
 const onSubmit = (e) =>{
   e.preventDefault();
   const FormData = new formData(e.currentTarget)
-  console.log(FormData);
+
   toast.success(`Your message was sent successfully`,{ duration: 3000, position: 'top-center',className: 'bg-success text-white'})
   navigate("/")
 }

@@ -21,12 +21,11 @@ const [userAddress, setUserAddress] = useState(null)
 async function getUserAddresses(){
   let response = await userAddresses()
   setUserAddress(response.data)
-  console.log(response);
+
 }
 
 async function makingOrder(shippingAddress,paymentMethodType){
-  console.log(shippingAddress);
-  console.log(paymentMethodType);
+
 
   let response = await OrderRequest(shippingAddress,paymentMethodType)
   if(response?.data?.status === "success"){
@@ -34,7 +33,7 @@ async function makingOrder(shippingAddress,paymentMethodType){
   setNumOfCartItems(0)
   navigate("/")
   }
-  console.log(response);
+
 }
 
 

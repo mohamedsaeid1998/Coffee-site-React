@@ -21,20 +21,20 @@ let navigate = useNavigate()
 })
   
 async function changePassword(values){
-  console.log(values);
+
   let response= await axios.patch("https://coffee-2pwn.onrender.com/api/v1/users/changePassword",values,
   {
     headers:header
   })
   .then((response)=>response)
   .catch((error)=>{
-      console.log(error);
+
       setErrorMessage(error.response.data.messsgae)
       toast.error(`${ErrorMessage}`,{ duration: 2000, position: 'bottom-center',className: 'bg-danger text-white'})
 
   })
   if(response.data.message===" change password is succes"){
-    console.log(response);
+
     toast.success(`The password has been changed successfully`,{ duration: 3000, position: 'top-center',className: 'bg-success text-white text-center'})
     navigate('/profile')
   }

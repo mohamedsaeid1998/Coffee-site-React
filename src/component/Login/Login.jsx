@@ -23,8 +23,6 @@ let {data} = await axios.post("https://coffee-2pwn.onrender.com/api/v1/users/sig
     setLoading(false)
     setErrorMessage(error.response.data.messsgae)
     toast.error(`${error.response.data.messsgae  }`,{ duration: 2000, position: 'bottom-center',className: 'bg-danger text-white'})
-    console.log(error);
-    console.log(data.n.messsgae);
   })
 if (data.token || data.messsgae==="Invalid token specified"){
   localStorage.setItem("userToken",data.token)

@@ -58,26 +58,3 @@ export default function About() {
 
 
 
-
-
-
-
-  //     <h1 className={`${style.heading} `} >
-  //       {" "}
-  //       <span className={`${style.h1} `} >ABOUT US</span> 
-  //     </h1>
-  //   <section  id="about" className="container">
-
-  //     <div class="row">
-  //       <div class="image">
-  //         <img className={`${style.img} `} src={about} alt="Logo" />
-  //       </div>
-
-  //       <div className={`${style.content} container`}>
-
-
-  //       </div>
-  //     </div>
-  //   </section>
-  // {/* </div> */}
-

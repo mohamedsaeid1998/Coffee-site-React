@@ -27,12 +27,12 @@ async function setToUserCart(id,rate){
   }else{
     toast.error(`You must Sign in First `,{ duration: 3000, position: 'top-center',className: 'bg-danger text-white text-center'})
   }
-  console.log(response)
+
 }
 
 async function handlePageClick(data){
   let page = data.selected+1
-  console.log(page);
+
   getProducts(page)
 }
 
@@ -40,7 +40,7 @@ const [Products, setProducts] = useState(null)
 async function getProducts(page){
   let {data} = await axios.get(`https://coffee-2pwn.onrender.com/api/v1/products?page=${page}`).catch((error)=>error)
   setProducts(data)
-  console.log(data);
+
   }
 
   return <>

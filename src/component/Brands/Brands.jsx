@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import { cartContext } from '../../Context/CartContext';
 import { toast } from 'react-hot-toast';
 import ReactPaginate from 'react-paginate';
-
+import Loading from '../Loading/Loading';
 export default function Brands() {
 
 useEffect(()=>{
@@ -61,7 +61,7 @@ async function getBrands(){
         </div>
         </div>
         
-    :null}
+    :<Loading/>}
 
   
   

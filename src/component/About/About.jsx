@@ -22,7 +22,7 @@ export default function About() {
 
       <div className="col-md-6 ">
         <div className="about-content text-white">
-        <h3 className="text-main fw-bold h2">what makes our coffee special ?</h3>
+        <h3 className="text-main fw-bold h2 mt-2 mt-md-0 ">what makes our coffee special ?</h3>
         <p className="h5 lh-base">
           Both tea and coffee are regarded as popular beverages in the
           world. In different  parts of the world, people use to enjoy tea

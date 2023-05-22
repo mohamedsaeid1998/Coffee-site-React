@@ -6,7 +6,6 @@ import { cartContext } from '../../Context/CartContext'
 
 export default function Navbar({SetUserData,logout}) {
 
-
 let {numOfCartItems} = useContext(cartContext)
 
   return <>

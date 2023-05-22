@@ -82,8 +82,8 @@ getUserAddresses(detailss,phonee,cityy,streett)
                   <Helmet>
         <title>CheckOut</title>
         </Helmet>
-  <div className="container-fluid container-lg py-5">
-  <div className='w-75 py-5 mx-auto text-white'>
+  <div className="container container-lg py-5">
+  <div className='w-75 py-5 text-white'>
     <form onSubmit={formik.handleSubmit}>
 
       <label className='my-2 fw-bold' htmlFor="city">City / Area</label>

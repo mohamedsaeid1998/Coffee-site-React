@@ -15,17 +15,22 @@ const [load, setLoad] = useState(false)
 
   useEffect(()=>{
     displayCartProducts()
-  },[Product])
+  },[])
 
 
 async function displayCartProducts(){
+  setLoad(true)
 let response = await getUserCart()
 
   if(response?.data?.status==="success"){
+    
+  setLoad(false)
     setProduct(response?.data)
     setNumOfCartItems(response?.data?.numOfCartItems)
   }else{
+    
     navigate("/emptyCart")
+    setLoad(false)
   }
 }
 
@@ -43,12 +48,8 @@ if(response.data.User.addresses.length===0){
 
 
 async function deleteCartProducts(id){
-
-  setLoad(true)
   let response = await deleteProductCart(id)
-  setProduct(response.data)
-
-  setLoad(false)
+  displayCartProducts()
 }
 
 
@@ -56,11 +57,8 @@ async function updateCartProducts(id,count){
   if (count === 0){
     return ;
   }
-  setLoad(true)
   let response = await updateProductCart(id,count)
-  setProduct(response.data)
-  setLoad(false)
-
+  displayCartProducts()
 }
 
 return <>
@@ -70,23 +68,16 @@ return <>
     {Product?.numOfCartItems === 0 ? <EmptyCart/> :    <div className='bg-background p-4 my-4 position-relative '>
 
 
-      {load?<div><h6 className='text-subMain h2 fw-bold'>Shop Cart</h6>
+      <div><h6 className='text-subMain h2 fw-bold'>Shop Cart</h6>
       <h6 className='text-blue fw-bolder'>Total price : {Product?.data?.totalCartPrice} EGP</h6>
-        </div>:null}
-      {load? null:<div className='sticky'>
-      <div className="inner-price  ">
-      <h5 className='fw-bolder text-white'>Order summary</h5>
-      <h6 className='my-4 text-white'>Subtotal (<span className='text-primary fw-bold'>{Product?.numOfCartItems} items</span>) </h6>
-      <h6 className='fw-bolder my-3 text-white'> Total <span className='price text-muted'>(Inclusive of VAT)</span>  : <span className='text-blue'>{Product?.data?.totalCartPrice} EGP</span></h6>
-      <button onClick={()=>checkUserAddresses()} className='btn btn-primary w-100'>CHECK OUT</button>
-    </div> 
-      </div>}
-      {load? <div className='text-center'><i className='fas fa-spinner fa-spin fa-4x text-main' ></i></div>:<div>      {Product?.data?.cartItems.map((product , index)=><div key={index}
+        </div>
+
+      {load? <div className='text-center'><i className='fas fa-spinner fa-spin fa-4x text-main' ></i></div>:<div>{Product?.data?.cartItems.map((product , index)=><div key={index}
         className="row py-2 my-2 border-bottom align-content-center  text-white">
         <div className="col-md-8 d-flex justify-content-start">
 
           <div>
-          <img src={product?.product?.image} className='' height={180} width={180} alt="" />
+          <img src={product?.product?.image}  height={180} width={180} alt="" />
           </div>
 
           <div className='mx-3'>
@@ -111,7 +102,16 @@ return <>
 
 
       </div>)}</div>}
+      {load? null:<div className='sticky '>
+      <div className="inner-price ">
+      <h5 className='fw-bolder text-white'>Order summary</h5>
+      <h6 className='my-4 text-white'>Subtotal (<span className='text-primary fw-bold'>{Product?.numOfCartItems} items</span>) </h6>
+      <h6 className='fw-bolder my-3 text-white'> Total <span className='price text-muted'>(Inclusive of VAT)</span>  : <span className='text-blue'>{Product?.data?.totalCartPrice} EGP</span></h6>
 
+      <button onClick={()=>checkUserAddresses()} className='btn btn-primary ms-5'>CHECK OUT</button>
+
+    </div> 
+      </div>}
 
     </div> }
 

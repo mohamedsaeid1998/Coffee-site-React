@@ -10,10 +10,6 @@ export default function CartContextProvider(props){
   }
 
 
-  // let headers ={
-  //   token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0MzA4OGQxZGNmNmFlMDAzZDBlNGNmYSIsIm5hbWUiOiJtb2hhbWVkIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2ODI2MTU4OTksImV4cCI6MTY5MDM5MTg5OX0.pZgKlPqnnvLFy-yk_03M-sh5xqP0SeNnizvCGX7BfgI"
-  // }
-
 useEffect(()=>{
   getCart()
 },[])
@@ -23,7 +19,6 @@ const [cartId, setCartId] = useState(null)
 
 async function getCart(){
   let response = await getUserCart()
-  console.log(response);
   if(response?.data?.status === "success"){
   setNumOfCartItems(response?.data?.numOfCartItems)
   setCartId(response?.data?.data?._id)

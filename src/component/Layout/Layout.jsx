@@ -4,14 +4,18 @@ import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 import { useNavigate } from 'react-router-dom'
 import { Offline } from "react-detect-offline";
+
+
 export default function Layout({SetUserData ,setSetUserData}) {
 let navigate =useNavigate()
+
 
 function logout(){
   localStorage.removeItem("userToken")
   setSetUserData(null)
   navigate("./login")
 }
+
 
 
   return <>

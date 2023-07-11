@@ -57,6 +57,7 @@ async function updateCartProducts(id,count){
   if (count === 0){
     return ;
   }
+  
   let response = await updateProductCart(id,count)
   displayCartProducts()
 }

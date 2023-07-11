@@ -1,9 +1,8 @@
-
-import Home from './component/Home/Home';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 import { RouterProvider, createHashRouter } from 'react-router-dom';
+import './App.css';
+import Home from './component/Home/Home';
 import About from './component/About/About';
-import Products from './component/Products/Products';
 import Contact from './component/Contact/Contact';
 import Cart from './component/Cart/Cart';
 import Login from './component/Login/Login';
@@ -15,7 +14,6 @@ import Brands from './component/Brands/Brands';
 import NotFound from './component/NotFound/NotFound';
 import { Toaster } from 'react-hot-toast';
 import jwtDecode from 'jwt-decode';
-import { useEffect, useState } from 'react';
 import ProductDetails from './component/ProductDetails/ProductDetails';
 import CartContextProvider from './Context/CartContext';
 import BrandDetails from './component/BrandDetails/BrandDetails';
@@ -29,6 +27,8 @@ import Addresses from './component/Addresses/Addresses';
 import Profile from './component/Profile/Profile';
 import Reservation from './component/Reservation/Reservation';
 import ChangePassword from './component/ChangePassword/ChangePassword';
+const LazyLoading = React.lazy(()=> import("./component/Products/Products"))
+
 
 function App() {
 
@@ -53,7 +53,10 @@ function saveUserData(){
   let routers =createHashRouter([{
     path:"" , element:<Layout SetUserData={SetUserData} setSetUserData={setSetUserData}/> , children:[
     {index:true , element:<Home/>},
-    {path:"products" , element:<Products/>},
+    {path:"products" , element:
+    <React.Suspense fallback="Loading...">
+      <LazyLoading/>
+    </React.Suspense>},
     {path:"productDetails/:id" , element:<ProductDetails/>},
     {path:"categories" , element:<Categories/>},
     {path:"categoryDetails/:id" , element:<CategoryDetails/>},
@@ -76,7 +79,6 @@ function saveUserData(){
     {path:"*" , element:<NotFound/>},
     ]
   }])
-
 
 
   return <>

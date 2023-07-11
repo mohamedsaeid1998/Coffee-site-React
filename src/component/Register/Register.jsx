@@ -105,7 +105,7 @@ return <>
 
                     <div className="col-12 mt-2">
                         {Loading? <button type="button" className="btn w-100  btn btn-primary" id="btnRegister"><i className='fas fa-spinner fa-spin'></i></button>:
-                         <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-primary w-100" id="btnRegister">Create Account</button>}
+                        <button disabled={!(formik.isValid && formik.dirty)} type="submit" className="btn btn-primary w-100" id="btnRegister">Create Account</button>}
 
                 <p className="text-center text-white mt-2 w-100">
                 Already a member ?
